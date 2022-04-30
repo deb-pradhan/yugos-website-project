@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+/* This first section is a simple "reset". It allows the navbar to push up against the top of the browser window with no white space around it. This code also sets the default font for your whole page. Put it at the very top of your css page.  */
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  font-family: "Rubik", sans-serif;
+  font-weight: 100;
+  text-align: center; 
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+  }
+/*-----------------------------------------Navigation-------------------------------------------------------*/
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 5vw;
+  height: auto;
+  padding: 20px;
+}
+
+.chart-image{
+  margin-bottom: 30px;
+  width: 40vw;
+  height: auto;
+  padding: 20px;
+}
+
+/* this applies gradient animation to the navbar */
+nav {
+  animation: animateBg 14s linear infinite;
+  background-image: linear-gradient(
+    90deg,
+    #171717,
+    #424242,
+    #7a7a7a,
+    #3d3d3d,
+    #171717,
+    #424242
+  );
+  background-size: 600% 100%;
+}
+@keyframes animateBg {
+  0% {
+    background-position: 100% 0%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+/* This class is applied to the containing div <div class="nav"> and is used to set the background color and height of the navbar */
+.nav {
+  border-top: 1px solid rgb(34, 34, 34);
+  height: 60px; /* set same as height & line-height below */
+}
+
+/* This rule centers the nav items verticaly in the bar with the height and line height properties. Spacing between the nav items is controlled by setting right and left padding.  */
+.nav li {
+  font-size: 1.5 rem;
+  display: inline-block;
+  list-style: none;
+  height: 60px; /* should be the same as line-height */
+  line-height: 60px; /* should be the same as height */
+  padding: 0 40px; /* "0" sets top and bottom padding to none */
+}
+
+/* :hover allows you change the background color of the nav items when you mouse over them. Play around with the transition value to change the speed of the hover transition. */
+.nav li:hover {
+  background-color: rgb(148, 105, 41);
+  transition: background-color 0.3s;
+}
+
+/* This rule is applied to the link <a> tag. It lets you turn off the link underline and set the link text color. */
+.nav-link {
+  color: #fff;
+  text-decoration: none;
+}
+
+/*-------------------------------Body-------------------------------------------------------*/
+
+a {
+  color: #ff6600;
+  transition: 0.5s;
+  -moz-transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  font-family: "Muli", sans-serif;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+h2 {
+  padding-bottom: 15px;
+  font-family: "Merriweather", "Open Sans Condensed", sans-serif;
+  font-size: 48px;
+  
+}
+
+h2 a {
+  font-family: "rubik","Open Sans Condensed", sans-serif;
+  font-size: 48px;
+  color: #333;
+}
+
+h2 a:hover {
+  color: #ff6600;
+  text-decoration: none;
+}
+
+p {
+  color: #333;
+  font-family: "rubik", sans-serif;
+  margin-bottom: 15px;
+}
+
+a.more-link {
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+  font-family: "rubik", Helvetica, sans-serif;
+  padding: 3px 10px;
+  background-color: #ff6600;
+  border-radius: 5px;
+  float: right;
+}
+
+a.more-link:hover {
+  text-decoration: none;
+  background-color: #666;
+  border-radius: 0px;
+}
+
+.story{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40vw;
+    height: auto;
+    padding: 20px;
+}
+
+.container{
+    display: flex;
+    margin: 10px;
+    padding:5px;
+    justify-content: space-evenly;
+    
+}
+
+.card{
+    background-color: #e7e7e7;
+    border: 2px solid black;
+    margin: 5px;
+    padding: 30px;
+    border-radius: 5px;
+    width:40vw;
+    height: auto;
+}
+
+.card h2{
+    font-size:32px;
+    padding: 20px 10px;
+    margin-top: 0;
+}
+
+
+/* ----------------------------Footer section---------------------------------------------- */
+#footer {
+  position: relative;
+  bottom: 0;
+  margin-top:-50px;
+  width: 100%;
+  height: auto;
+}
+
+.emailSignup {
+  display: block;
+  background-color: #313131;
+  width: 100%;
+  margin: 0;
+  position: relative;
+  box-sizing: border-box;
+  padding: 30px;
+  text-align: center;
+}
+.emailSignup h2 {
+  font-size: 1.5rem;
+  margin: 0 0 10px;
+  color: #ffffff;
+}
+.emailSignup p {
+  font-size: 1rem;
+  line-height: 1.4;
+  margin: 0 0 20px;
+  color: #d3d3d3;
+}
+
+.emailSignup form {
+  text-align: center;
+}
+
+.emailSignup--email-input {
+  border: 0;
+  outline: 0;
+  width: 450px;
+  height: 45px;
+  line-height: 46px;
+  padding: 5px 20px;
+  box-sizing: border-box;
+  font-size: 18px;
+  border-radius: 50px;
+  display: inline-block;
+}
+
+.emailSignup--email-submit {
+  border: 0;
+  width: 150px;
+  height: 45px;
+  line-height: 46px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  background: rgb(57, 36, 0);
+  background: linear-gradient(
+    47deg,
+    rgba(57, 36, 0, 1) 0%,
+    rgba(218, 135, 0, 1) 100%
+  );
+  color: #ffffff;
+  border-radius: 50px;
+  text-transform: uppercase;
+  display: inline-block;
+}
